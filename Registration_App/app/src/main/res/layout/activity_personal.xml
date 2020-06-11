@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PersonalActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/formLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="391dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="150dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+            <Button
+                android:id="@+id/proceed_Id"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="75dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="75dp"
+                android:layout_marginBottom="20dp"
+                android:onClick="proceedFunc"
+                android:text="Submit"
+                android:textSize="18sp"
+                tools:layout_editor_absoluteX="203dp"
+                tools:layout_editor_absoluteY="714dp" />
+
+            <Button
+                android:id="@+id/cancel_Id"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="75dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="75dp"
+                android:layout_marginBottom="5dp"
+                android:onClick="cancelFunc"
+                android:text="Cancel"
+                android:textSize="18sp"
+                tools:layout_editor_absoluteX="33dp"
+                tools:layout_editor_absoluteY="714dp" />
+        </TableLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="395dp"
+            android:layout_height="393dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/name_Id2"
+                android:layout_width="240dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="10dp"
+                android:background="#E0F5E1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/name_Id1"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:background="#B925DD03"
+                android:gravity="center"
+                android:padding="10dp"
+                android:paddingTop="0dp"
+                android:text="Name"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/name_Id2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioButton
+                android:id="@+id/female_Id"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingRight="15dp"
+                android:text="Female"
+                android:textColor="#189C00"
+                android:textSize="22sp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name_Id2" />
+
+            <RadioButton
+                android:id="@+id/male_Id"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:paddingRight="15dp"
+                android:text="Male"
+                android:textColor="#189C00"
+                android:textSize="22sp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/female_Id"
+                app:layout_constraintTop_toBottomOf="@+id/name_Id2" />
+
+            <TextView
+                android:id="@+id/age_Id"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:background="#B925DD03"
+                android:gravity="center"
+                android:padding="10dp"
+                android:paddingTop="0dp"
+                android:text="Gender"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/male_Id"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name_Id1" />
+
+            <TextView
+                android:id="@+id/dob_Id1"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:background="#B925DD03"
+                android:gravity="center"
+                android:padding="10dp"
+                android:paddingTop="0dp"
+                android:text="DOB"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/dob_Id2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/age_Id" />
+
+            <TextView
+                android:id="@+id/dob_Id2"
+                android:layout_width="240dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#E0F5E1"
+                android:editable="false"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="date"
+                android:textSize="18sp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/male_Id" />
+
+            <TextView
+                android:id="@+id/mnum_Id1"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:background="#B925DD03"
+                android:gravity="center"
+                android:padding="10dp"
+                android:paddingTop="0dp"
+                android:text="Mobile.no"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/mnum_Id2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dob_Id1" />
+
+            <EditText
+                android:id="@+id/mnum_Id2"
+                android:layout_width="240dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="10dp"
+                android:background="#E0F5E1"
+                android:ems="10"
+                android:inputType="number"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dob_Id2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/output_Id"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

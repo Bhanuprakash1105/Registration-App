@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="os_id" type="id" />
+    <item name="dsa_id" type="id" />
+    <item name="dppl_id" type="id" />
+    <item name="heading_id" type="id" />
+    <item name="elective_id" type="id" />
+    <item name="ai_id" type="id" />
+    <item name="ml_id" type="id" />
+    <item name="itw2_id" type="id" />
+    <item name="nlp_id" type="id" />
+    <item name="enter_id" type="id" />
+</resources>
